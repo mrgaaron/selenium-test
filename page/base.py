@@ -8,5 +8,7 @@ class BasePage(object):
         self.driver = driver
 
     def navigate(self, page):
+        """Navigate to the given `page` specified by the link name in the top navbar"""
+        
         navbar_item = self.driver.find_element(By.LINK_TEXT, page)
         navbar_item.click()
