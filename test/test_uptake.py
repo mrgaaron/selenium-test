@@ -16,7 +16,7 @@ class UptakeTest(unittest.TestCase):
         self.assertTrue(home.has_title_match())
         self.assertTrue(home.navbar_in_correct_state())
 
-        home.navigate("People")
+        home.click_navbar_link("People")
 
         people = PeoplePage(self.driver)
         self.assertTrue(people.has_title_match())
