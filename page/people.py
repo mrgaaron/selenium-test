@@ -14,7 +14,7 @@ class PeoplePage(BasePage):
         # can't just test for "Uptake" because that's in all the page titles
         return "People" in self.driver.title
 
-    def navbar_in_correct_state(self):
+    def is_navbar_in_correct_state(self):
         """Asserts that the People navbar element is "highlighted" """
 
         navbar_item = self.driver.find_element(By.CSS_SELECTOR, "li.current-menu-item")

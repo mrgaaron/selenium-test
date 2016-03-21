@@ -14,10 +14,10 @@ class UptakeTest(unittest.TestCase):
         self.driver.get('http://www.uptake.com')
         home = HomePage(self.driver)
         self.assertTrue(home.has_title_match())
-        self.assertTrue(home.navbar_in_correct_state())
+        self.assertTrue(home.is_navbar_in_correct_state())
 
         home.click_navbar_link("People")
 
         people = PeoplePage(self.driver)
         self.assertTrue(people.has_title_match())
-        self.assertTrue(people.navbar_in_correct_state())
+        self.assertTrue(people.is_navbar_in_correct_state())

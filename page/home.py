@@ -14,7 +14,7 @@ class HomePage(BasePage):
         # can't just test for "Uptake" because that's in all the page titles
         return "Analytics for the Industrial Internet" in self.driver.title
 
-    def navbar_in_correct_state(self):
+    def is_navbar_in_correct_state(self):
         """Asserts that no navbar elements are "highlighted" as they would be on a subpage"""
 
         navbar_items = self.driver.find_elements(By.CSS_SELECTOR, "li.current-menu-item")
